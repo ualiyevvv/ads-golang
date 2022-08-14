@@ -27,7 +27,7 @@ func main() {
 	tree.InorderTraversal()
 	fmt.Println("\nmax = ", tree.FindMax())
 
-	dfs := tree.Dfs()
+	dfs := tree.Dfs(10)
 	for _, r := range dfs {
 		fmt.Println(r)
 	}
