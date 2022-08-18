@@ -1,7 +1,5 @@
 package adsgraphs
 
-import "fmt"
-
 func isValidGraph(arr [][]int) bool {
 	degreeOfVertexes := 0
 	countOfEdge := 0
@@ -19,8 +17,6 @@ func isValidGraph(arr [][]int) bool {
 			}
 		}
 	}
-
-	fmt.Println(arr)
 
 	countOfEdge *= 2
 	return countOfEdge == degreeOfVertexes

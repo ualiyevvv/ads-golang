@@ -8,6 +8,10 @@ import (
 	"strings"
 )
 
+var (
+	GlobalArr [][]int
+)
+
 func InputGraph() {
 	args := os.Args[1:]
 	if len(args) != 1 {
@@ -16,17 +20,14 @@ func InputGraph() {
 	filePath := args[0]
 	input := utils.ReadFile(filePath)
 	rows := strings.Split(string(input), "\r\n")
-	n1, n2 := getMeta(rows[0])
+	_, n2 := getMeta(rows[0])
 	arr := convertToIntArray(rows[1:])
+	GlobalArr = arr
 	if !isValidGraph(arr) {
 		panic("this graph couldn't exist")
-	} else {
-		fmt.Println("valid")
 	}
-	fmt.Print(n1)
-	fmt.Println("//")
-	fmt.Print(n2)
-	fmt.Println("//")
+	countOf := OneGraph(arr[n2-1], n2-1, 0)
+	fmt.Println("solve = ", countOf)
 }
 
 func getMeta(text string) (int, int) {
