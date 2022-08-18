@@ -2,6 +2,7 @@ package main
 
 import (
 	bt "ads-golang/binaryTree"
+	adsgraphs "ads-golang/graphs"
 	"fmt"
 )
 
@@ -31,5 +32,5 @@ func main() {
 	for _, r := range dfs {
 		fmt.Println(r)
 	}
-
+	adsgraphs.InputGraph()
 }
