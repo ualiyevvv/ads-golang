@@ -1,7 +1,8 @@
 package main
 
 import (
-	"ads-golang/goroutines"
+	"ads-golang/leetcode"
+	"fmt"
 )
 
 func main() {
@@ -31,5 +32,13 @@ func main() {
 	// 	fmt.Println(r)
 	// }
 	// adsgraphs.InputGraph()
-	goroutines.Start()
+	// goroutines.Start()
+	// goroutines.TaskFunc()
+	s := []byte{'h', 'e', 'l', 'l', 'o'}
+	// fmt.Println(leetcode.TaskN(s))
+	leetcode.ReverseString(s, 0, len(s)-1)
+	fmt.Println(string(s))
+	// b := s[len(s)-1:]
+	// fmt.Println(string(b))
+	// fmt.Println(string(s[:len(s)-1]))
 }
